@@ -1,0 +1,8 @@
+localhost ansible_connection=local
+
+[master]
+192.168.0.20   ansible_user=ubuntu
+
+[workers]
+192.168.0.21   ansible_user=ubuntu
+192.168.0.22   ansible_user=ubuntu
