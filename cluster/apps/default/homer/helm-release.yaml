@@ -35,5 +35,5 @@ spec:
     persistence:
       config:
         enabled: true
-        existingClaim: homer-config
+        existingClaim: tester-config
         mountPath: /www/assets
