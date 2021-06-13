@@ -2,7 +2,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: tester
+  name: homer
   namespace: default
 spec:
   interval: 5m
@@ -25,15 +25,15 @@ spec:
       annotations:
         kubernetes.io/ingress.class: "nginx"
       hosts:
-      - host: "tester.${SECRET_DOMAIN}"
+      - host: "homer.${SECRET_DOMAIN}"
         paths:
         - path: /
           pathType: Prefix
       tls:
       - hosts:
-        - "tester.${SECRET_DOMAIN}"
+        - "homer.${SECRET_DOMAIN}"
     persistence:
       config:
         enabled: true
-        existingClaim: tester-config
+        existingClaim: homer-config
         mountPath: /www/assets
