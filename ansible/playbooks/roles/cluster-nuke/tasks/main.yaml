@@ -1,5 +1,5 @@
 ---
-- name: cluster-nuke | uninstall k3s master
+- name: uninstall k3s master
   become: true
   command: sh /usr/local/bin/k3s-uninstall.sh
   when: hostvars[inventory_hostname].group_names[0] == "master"
@@ -7,7 +7,7 @@
   async: 45
   poll: 0
 
-- name: cluster-nuke | uninstall k3s master
+- name: uninstall k3s workers
   become: true
   command: sh /usr/local/bin/k3s-agent-uninstall.sh
   when: hostvars[inventory_hostname].group_names[0] == "workers"
