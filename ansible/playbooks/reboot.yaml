@@ -1,0 +1,22 @@
+---
+- hosts:
+  - master
+  - workers
+  become: true
+  gather_facts: false
+  vars_prompt:
+    name: "reboot_confirmation"
+    prompt: "This will REBOOT the cluster. Do you wish to continue? [Y/n]"
+    default: "n"
+    private: no
+  any_errors_fatal: yes
+  pre_tasks:
+  - name: check confirmation
+    fail:
+      msg: "Abort."
+    when: reboot_confirmation != "Y"
+  tasks:
+  - name: reboot nodes
+    become: true
+    shell: |
+      reboot -n
