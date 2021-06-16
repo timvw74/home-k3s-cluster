@@ -25,7 +25,7 @@ spec:
       persistence:
         enabled: true
         storageClassName: "local-path"
-        size: 25Gi
+        size: 1Gi
       serviceMonitor:
         enabled: true
     promtail:
