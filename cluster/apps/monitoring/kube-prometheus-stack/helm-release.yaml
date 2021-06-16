@@ -69,9 +69,7 @@ spec:
       ingress:
         enabled: true
         pathType: Prefix
-        ingressClassName: "traefik"
-        annotations:
-          traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+        ingressClassName: "nginx"
         hosts:
         - "alertmanager.${SECRET_DOMAIN}"
         tls:
@@ -84,7 +82,7 @@ spec:
               storageClassName: "local-path"
               resources:
                 requests:
-                  storage: 10Gi
+                  storage: 1Gi
     nodeExporter:
       serviceMonitor:
         relabelings:
@@ -118,9 +116,7 @@ spec:
       ingress:
         enabled: true
         pathType: Prefix
-        ingressClassName: "traefik"
-        annotations:
-          traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+        ingressClassName: "nginx"
         hosts:
         - "prometheus.${SECRET_DOMAIN}"
         tls:
@@ -153,6 +149,6 @@ spec:
           static_configs:
           - targets:
             # pfsense
-            - 192.168.1.1:9100
+            # - 192.168.1.1:9100
             # microserver
-            - 192.168.1.240:9100
+            # - 192.168.1.240:9100
