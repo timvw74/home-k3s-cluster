@@ -84,7 +84,7 @@ spec:
               storageClassName: "local-path"
               resources:
                 requests:
-                  storage: 10Gi
+                  storage: 1Gi
     nodeExporter:
       serviceMonitor:
         relabelings:
@@ -145,7 +145,7 @@ spec:
               storageClassName: "local-path"
               resources:
                 requests:
-                  storage: 50Gi
+                  storage: 1Gi
         additionalScrapeConfigs:
         - job_name: 'node-exporter'
           honor_timestamps: true
