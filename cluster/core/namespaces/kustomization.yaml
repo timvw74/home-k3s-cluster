@@ -5,3 +5,4 @@ resources:
 - metallb-system.yaml
 - monitoring.yaml
 - test.yaml
+- networking.yaml
