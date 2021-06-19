@@ -25,6 +25,7 @@ spec:
       GF_LOG_FILTERS: rendering:debug
       VAR_BLOCKY_URL: "http://blocky.networking.svc.cluster.local:4000"
     adminPassword: "${SECRET_GRAFANA_PASSWORD}"
+    adminUser: "admin"
     grafana.ini:
       server:
         root_url: "https://grafana.${SECRET_DOMAIN}"
