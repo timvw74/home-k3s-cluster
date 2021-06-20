@@ -28,14 +28,6 @@ spec:
         paths:
         - path: /
           pathType: Prefix
-      - host: "timvw.co.uk"
-        paths:
-        - path: /
-          pathType: Prefix
-      - host: "www.timvw.co.uk"
-        paths:
-        - path: /
-          pathType: Prefix
       tls:
       - hosts:
         - "homer.${SECRET_DOMAIN}"
