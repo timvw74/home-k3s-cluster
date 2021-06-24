@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
 # - botkube
 - grafana
-# - kube-prometheus-stack
+- kube-prometheus-stack
 - loki
