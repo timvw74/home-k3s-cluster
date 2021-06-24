@@ -28,9 +28,14 @@ spec:
         paths:
         - path: /
           pathType: Prefix
+      - host: "homer.timvw.co.uk"
+        paths:
+        - path: /
+          pathType: Prefix
       tls:
       - hosts:
         - "homer.${SECRET_DOMAIN}"
+        - "homer.timvw.co.uk"
     persistence:
       config:
         enabled: true
