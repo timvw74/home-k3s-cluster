@@ -4,4 +4,3 @@ resources:
 - cloudflare.yaml
 - rfc1918.yaml
 - redirect-path.yaml
-- basic-auth.yaml
