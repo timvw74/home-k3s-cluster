@@ -28,8 +28,6 @@ spec:
           mqtt:
             enabled: true
             port: 1883
-            protocol: TCP
-            targetPort: 1883
 
     auth:
       # -- By enabling this, `allow_anonymous` gets set to `false` in the mosquitto config.
@@ -49,3 +47,9 @@ spec:
         enabled: false
         mountPath: /mosquitto/configinc
         existingClaim: mosquitto-data
+  ingress:
+    enabled: true
+    ingressClassName: "traefik"
+  prometheus:
+      serviceMonitor:
+        enabled: true
