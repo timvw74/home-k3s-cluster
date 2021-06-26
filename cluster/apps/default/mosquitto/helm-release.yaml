@@ -28,6 +28,7 @@ spec:
           mqtt:
             port: 1883
             enabled: true
+            protocol: TCP
     ingress:
       main:
         enabled: true
