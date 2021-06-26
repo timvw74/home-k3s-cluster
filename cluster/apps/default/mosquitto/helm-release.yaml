@@ -30,7 +30,6 @@ spec:
             protocol: TCP
     ingress:
       mqtt:
-        enabled: true
         ingressClassName: "traefik"
     auth:
       # -- By enabling this, `allow_anonymous` gets set to `false` in the mosquitto config.
