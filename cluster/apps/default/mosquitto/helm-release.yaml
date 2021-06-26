@@ -47,9 +47,3 @@ spec:
         enabled: false
         mountPath: /mosquitto/configinc
         existingClaim: mosquitto-data
-  ingress:
-    enabled: true
-    ingressClassName: "traefik"
-  prometheus:
-      serviceMonitor:
-        enabled: true
