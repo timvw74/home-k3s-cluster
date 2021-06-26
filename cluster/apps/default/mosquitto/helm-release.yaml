@@ -28,11 +28,6 @@ spec:
           mqtt:
             enabled: true
             port: 1883
-    ingress:
-      enabled: true
-      ingressClassName: "traefik"
-      annotations:
-        traefik.ingress.kubernetes.io/router.entrypoints: "mqtt"
     auth:
       # -- By enabling this, `allow_anonymous` gets set to `false` in the mosquitto config.
       enabled: false
