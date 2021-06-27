@@ -29,9 +29,6 @@ spec:
             port: 1883
             enabled: true
             protocol: TCP
-    ingress:
-      main:
-        enabled: true
 
     auth:
       # -- By enabling this, `allow_anonymous` gets set to `false` in the mosquitto config.
