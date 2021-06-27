@@ -31,6 +31,15 @@ spec:
     ingressRoute:
       dashboard:
         enabled: false
+    service:
+      enabled: true
+      type: LoadBalancer
+      spec:
+        externalIPs:
+        - "${SVC_TRAEFIK_ADDRESS}"
+        externalTrafficPolicy: Local
+      annotations:
+        external-dns.alpha.kubernetes.io/hostname: "ipv4.${SECRET_DOMAIN}"
     globalArguments:
     - "--serverstransport.insecureskipverify=true"
     - "--providers.kubernetesingress.ingressclass=traefik"
