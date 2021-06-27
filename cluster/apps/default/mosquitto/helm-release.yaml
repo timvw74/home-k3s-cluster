@@ -23,6 +23,9 @@ spec:
     service:
       main:
         type: LoadBalancer
+        annotations:
+          traefik.ingress.kubernetes.io/service.serversscheme: mqtt
+          metallb.universe.tf/allow-shared-ip: mosquitto
         loadBalancerIP: ${LB_ADDRESS}
         externalTrafficPolicy: Local
     auth:
