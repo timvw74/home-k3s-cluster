@@ -26,7 +26,7 @@ spec:
         annotations:
           traefik.ingress.kubernetes.io/service.serversscheme: mqtt
           metallb.universe.tf/allow-shared-ip: mosquitto
-        loadBalancerIP: ${LB_ADDRESS}
+        loadBalancerIP: ${MOSQUITTO_ADDRESS}
         externalTrafficPolicy: Local
     auth:
       # -- By enabling this, `allow_anonymous` gets set to `false` in the mosquitto config.
