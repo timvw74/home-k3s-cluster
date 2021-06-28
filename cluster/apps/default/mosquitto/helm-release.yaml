@@ -52,3 +52,11 @@ spec:
         enabled: false
         mountPath: /mosquitto/configinc
         existingClaim: mosquitto-data
+
+    additionalContainers:
+      - name: mqtt2prometheus
+        image: "ghcr.io/hikhvar/mqtt2prometheus:latest"
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 9641
+            name: prom
