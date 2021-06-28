@@ -60,3 +60,6 @@ spec:
         ports:
           - containerPort: 9641
             name: prom
+        volumeMounts:
+        - name: mqtt2prometheus-config
+          mountPath: /config.yaml
