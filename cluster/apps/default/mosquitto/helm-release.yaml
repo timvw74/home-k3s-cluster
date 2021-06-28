@@ -62,4 +62,3 @@ spec:
         volumeMounts:
           - name: mqtt2prometheus-config
             mountPath: /config.yaml
-            type: configMap
