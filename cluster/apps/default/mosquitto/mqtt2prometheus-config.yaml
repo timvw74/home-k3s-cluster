@@ -1,0 +1,51 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mqtt2prometheus-config
+  namespace: default
+data:
+  config.yaml: |
+    mqtt:
+      server: tcp://192.168.0.21:1883
+      topic_path: zigbee2mqtt/+
+      qos: 0
+    cache:
+      timeout: 24h
+    metrics:
+      - prom_name: temperature
+        mqtt_name: temperature
+        help: zigbee temperature reading
+        type: gauge
+        const_labels:
+          sensor_type: zigbee
+      - prom_name: humidity
+        mqtt_name: humidity
+        help: zigbee humidity reading
+        type: gauge
+        const_labels:
+          sensor_type: zigbee
+      - prom_name: battery
+        mqtt_name: battery
+        help: zigbee battery level
+        type: gauge
+        const_labels:
+          sensor_type: zigbee
+      - prom_name: linkquality
+        mqtt_name: linkquality
+        help: zigbee linkquality level
+        type: gauge
+        const_labels:
+          sensor_type: zigbee
+      - prom_name: pressure
+        mqtt_name: pressure
+        help: zigbee pressure level
+        type: gauge
+        const_labels:
+          sensor_type: zigbee
+      - prom_name: voltage
+        mqtt_name: voltage
+        help: zigbee voltage level
+        type: gauge
+        const_labels:
+          sensor_type: zigbee

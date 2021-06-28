@@ -28,6 +28,12 @@ spec:
           metallb.universe.tf/allow-shared-ip: mosquitto
         loadBalancerIP: ${MOSQUITTO_ADDRESS}
         externalTrafficPolicy: Local
+      prom:
+        ports:
+          http:
+            port: 9641
+        labels:
+          app.kubernetes.io/name: mqtt2prometheus
     auth:
       # -- By enabling this, `allow_anonymous` gets set to `false` in the mosquitto config.
       enabled: false
@@ -46,3 +52,14 @@ spec:
         enabled: false
         mountPath: /mosquitto/configinc
         existingClaim: mosquitto-data
+    additionalContainers:
+    - name: mqtt2prometheus
+      image: "ghcr.io/hikhvar/mqtt2prometheus:latest"
+      imagePullPolicy: IfNotPresent
+      ports:
+        - containerPort: 9641
+          name: http
+      volumeMounts:
+      - name: mqtt2prometheus-config
+        mountPath: /config.yaml
+        readOnly: true
