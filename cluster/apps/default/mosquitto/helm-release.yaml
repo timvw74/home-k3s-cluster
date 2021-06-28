@@ -59,8 +59,7 @@ spec:
       ports:
         - containerPort: 9641
           name: http
-      volumeMounts:
-      - name: mqtt2prometheus-config
-        mountPath: /config.yaml
+      volumes:
+      - mountPath: /config.yaml
+        name: mqtt2prometheus-config
         type: configMap
-        readOnly: true
