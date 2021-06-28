@@ -53,13 +53,13 @@ spec:
         mountPath: /mosquitto/configinc
         existingClaim: mosquitto-data
     additionalContainers:
-    - name: mqtt2prometheus
-      image: "ghcr.io/hikhvar/mqtt2prometheus:latest"
-      imagePullPolicy: IfNotPresent
-      ports:
-        - containerPort: 9641
-          name: http
-      volumes:
-      - mountPath: /config.yaml
-        name: mqtt2prometheus-config
-        type: configMap
+      - name: mqtt2prometheus
+        image: "ghcr.io/hikhvar/mqtt2prometheus:latest"
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 9641
+            name: http
+        volumeMounts:
+          - name: mqtt2prometheus-config
+            mountPath: /config.yaml
+            type: configMap
