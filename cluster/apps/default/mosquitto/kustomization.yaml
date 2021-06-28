@@ -4,4 +4,4 @@ resources:
 - helm-release.yaml
 - mqtt2prometheus-config.yaml
 # - pvc.yaml
-- service-monitor.yaml
+# - service-monitor.yaml
