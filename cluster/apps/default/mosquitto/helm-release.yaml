@@ -52,6 +52,12 @@ spec:
         enabled: false
         mountPath: /mosquitto/configinc
         existingClaim: mosquitto-data
+    volumes:
+      - name: mqtt2prometheus-config-volume
+      configMap:
+        # Provide the name of the ConfigMap containing the files you want
+        # to add to the container
+        name: mqtt2prometheus-config
     additionalContainers:
       - name: mqtt2prometheus
         image: "ghcr.io/hikhvar/mqtt2prometheus:latest"
@@ -60,5 +66,6 @@ spec:
           - containerPort: 9641
             name: http
         volumeMounts:
-          - name: mqtt2prometheus-config
+          - name: mqtt2prometheus-config-volume
             mountPath: /config.yaml
+
