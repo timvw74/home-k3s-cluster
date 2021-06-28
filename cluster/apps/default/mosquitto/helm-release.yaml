@@ -43,14 +43,13 @@ spec:
         # Provide the name of the ConfigMap containing the files you want
         # to add to the container
         name: mqtt2prometheus-config
-    additionalContainers:
-      - name: mqtt2prometheus
-        image: "ghcr.io/hikhvar/mqtt2prometheus:latest"
-        imagePullPolicy: IfNotPresent
-        ports:
-          - containerPort: 9641
-            name: http
-        volumeMounts:
-          - name: mqtt2prometheus-config-volume
-            mountPath: /config.yaml
-
+    # additionalContainers:
+    #   - name: mqtt2prometheus
+    #     image: "ghcr.io/hikhvar/mqtt2prometheus:latest"
+    #     imagePullPolicy: IfNotPresent
+    #     ports:
+    #       - containerPort: 9641
+    #         name: http
+    #     volumeMounts:
+    #       - name: mqtt2prometheus-config-volume
+    #         mountPath: /config.yaml
