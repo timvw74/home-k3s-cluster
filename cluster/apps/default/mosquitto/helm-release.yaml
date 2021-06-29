@@ -48,8 +48,8 @@ spec:
       ports:
       - containerPort: 9641
         name: prom
-      # volumeMounts:
-      # - name: m2p-cv
-      #   mountPath: /config.yaml
-      #   subPath: config-yaml
-      #   readOnly: true
+      volumeMounts:
+      - name: m2p-cv
+        mountPath: /config.yaml
+        subPath: config-yaml
+        readOnly: true
