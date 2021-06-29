@@ -41,15 +41,15 @@ spec:
       - name: m2p-cv
         configMap:
           name: mqtt2prometheus-config
-    # additionalContainers:
-    #   - name: mqtt2prometheus
-    #     image: "ghcr.io/hikhvar/mqtt2prometheus:latest"
-    #     imagePullPolicy: IfNotPresent
+    additionalContainers:
+      - name: mqtt2prometheus
+        image: "ghcr.io/hikhvar/mqtt2prometheus:latest"
+        imagePullPolicy: IfNotPresent
     #     ports:
     #       - containerPort: 9641
     #         name: prom
-    #     volumeMounts:
-    #       - name: m2p-cv
-    #         mountPath: /config.yaml
-    #         subPath: config-yaml
-    #         readOnly: true
+        volumeMounts:
+          - name: m2p-cv
+            mountPath: /config.yaml
+            subPath: config-yaml
+            readOnly: true
