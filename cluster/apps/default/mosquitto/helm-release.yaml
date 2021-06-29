@@ -65,4 +65,4 @@ spec:
             name: prom
         volumeMounts:
           - name: mqtt2prometheus-config-volume
-            mountpath: /config.yaml
+            mountpath: /
