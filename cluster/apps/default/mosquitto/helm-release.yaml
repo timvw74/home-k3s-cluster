@@ -38,9 +38,9 @@ spec:
       enabled: false
 
     additionalVolumes:
-    - name: m2p-cv
-      configMap:
-        name: mqtt2prometheus-config
+      - name: m2p-cv
+        configMap:
+          name: mqtt2prometheus-config
     additionalContainers:
     - name: mqtt2prometheus
       image: hikhvar/mqtt2prometheus:v0.1.5
@@ -51,5 +51,3 @@ spec:
       volumeMounts:
       - name: m2p-cv
         mountPath: /config.yaml
-        subPath: config-yaml
-        readOnly: true
