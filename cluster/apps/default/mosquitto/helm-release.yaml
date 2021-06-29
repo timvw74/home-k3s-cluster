@@ -43,7 +43,7 @@ spec:
         name: mqtt2prometheus-config
     additionalContainers:
     - name: mqtt2prometheus
-      image: "ghcr.io/hikhvar/mqtt2prometheus:latest"
+      image: hikhvar/mqtt2prometheus:v0.1.5
       imagePullPolicy: IfNotPresent
       ports:
       - containerPort: 9641
