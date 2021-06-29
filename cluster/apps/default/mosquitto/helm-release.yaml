@@ -54,8 +54,8 @@ spec:
         existingClaim: mosquitto-data
     volumes:
       - name: mqtt2prometheus-config-volume
-      configMap:
-        name: mqtt2prometheus-config
+        configMap:
+          name: mqtt2prometheus-config
     additionalContainers:
       - name: mqtt2prometheus
         image: "ghcr.io/hikhvar/mqtt2prometheus:latest"
