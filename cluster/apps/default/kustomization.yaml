@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
 - homer
 - mosquitto
-# - mqtt2prometheus
+- mqtt2prometheus
 # - bitwarden
