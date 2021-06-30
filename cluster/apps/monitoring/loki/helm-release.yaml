@@ -24,7 +24,7 @@ spec:
           retention_period: 336h
       persistence:
         enabled: true
-        storageClassName: "local-path"
+        storageClassName: longhorn
         size: 2Gi
       serviceMonitor:
         enabled: true
