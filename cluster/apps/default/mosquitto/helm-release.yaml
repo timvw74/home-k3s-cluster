@@ -23,8 +23,7 @@ spec:
     service:
       main:
         type: LoadBalancer
-        annotations:
-          metallb.universe.tf/allow-shared-ip: mosquitto
+
         loadBalancerIP: ${MOSQUITTO_ADDRESS}
         externalTrafficPolicy: Local
       prom:
