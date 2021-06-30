@@ -103,9 +103,6 @@ spec:
         - "grafana.${SECRET_DOMAIN}"
     persistence:
       enabled: true
-      storageClassName: "local-path"
-      size: 100Mi
-      accessModes:
-      - ReadWriteOnce
+        existingClaim: grafana-pvc
     podAnnotations:
       configmap.reloader.stakater.com/reload: "grafana"
