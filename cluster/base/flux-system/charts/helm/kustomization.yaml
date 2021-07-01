@@ -10,4 +10,3 @@ resources:
 - metallb-charts.yaml
 - prometheus-community-charts.yaml
 - traefik-charts.yaml
-
