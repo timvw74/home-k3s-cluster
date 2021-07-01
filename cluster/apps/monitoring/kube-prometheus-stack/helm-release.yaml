@@ -84,7 +84,7 @@ spec:
               storageClassName: longhorn
               resources:
                 requests:
-                  storage: 256Mi
+                  storage: 128Mi
     nodeExporter:
       serviceMonitor:
         relabelings:
@@ -145,7 +145,7 @@ spec:
               storageClassName: longhorn
               resources:
                 requests:
-                  storage: 1Gi
+                  storage: 2Gi
         additionalScrapeConfigs:
         - job_name: 'node-exporter'
           honor_timestamps: true
