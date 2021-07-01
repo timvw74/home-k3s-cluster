@@ -25,8 +25,8 @@ spec:
       host: "longhorn.${SECRET_DOMAIN}"
       tlsSecret: "${SECRET_DOMAIN/./-}"
     defaultSettings:
-      # backupTarget: "${SECRET_S3_BACKUP_BUCKET}"
-      # backupTargetCredentialSecret: longhorn-aws-secret
+      backupTarget: "${SECRET_S3_BACKUP_BUCKET}"
+      backupTargetCredentialSecret: longhorn-aws-secret
       defaultDataPath: /mnt/longhorn
     persistence:
       defaultClass: true
