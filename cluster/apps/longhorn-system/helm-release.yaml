@@ -30,7 +30,8 @@ spec:
       defaultDataPath: /mnt/longhorn
     persistence:
       defaultClass: true
-      defaultClassReplicaCount: 3
+      defaultClassReplicaCount: 2
+      defaultDataLocality: best-effort
       reclaimPolicy: Delete
       recurringJobs:
         enable: true
