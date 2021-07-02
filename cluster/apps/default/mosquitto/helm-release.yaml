@@ -35,6 +35,11 @@ spec:
     auth:
       # -- By enabling this, `allow_anonymous` gets set to `false` in the mosquitto config.
       enabled: false
+    livenessProbe:
+      tcpSocket:
+        port: 1883
+      initialDelaySeconds: 15
+      periodSeconds: 20
     # additionalVolumes:
     #   - name: m2p-cv
     #     configMap:
