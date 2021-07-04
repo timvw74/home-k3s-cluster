@@ -40,12 +40,12 @@ spec:
           "name":"snap",
           "task":"snapshot",
           "cron":"0 3 * * *",
-          "retain":1
+          "retain":2
         },
         {
           "name":"backup",
           "task":"backup",
           "cron":"30 3 */2 * *",
-          "retain":1
+          "retain":2
         }
       ]'
