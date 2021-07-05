@@ -6,4 +6,4 @@ metadata:
   namespace: networking
 spec:
   defaultCertificate:
-    secretName: "${INTERNAL_DOMAIN/./-}"
+    secretName: "${SECRET_DOMAIN/./-}"

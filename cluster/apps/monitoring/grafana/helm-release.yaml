@@ -28,7 +28,7 @@ spec:
     adminUser: "admin"
     grafana.ini:
       server:
-        root_url: "https://grafana.${INTERNAL_DOMAIN}"
+        root_url: "https://grafana.${SECRET_DOMAIN}"
       paths:
         data: /var/lib/grafana/data
         logs: /var/log/grafana
@@ -97,10 +97,10 @@ spec:
       annotations:
         traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
       hosts:
-      - "grafana.${INTERNAL_DOMAIN}"
+      - "grafana.${SECRET_DOMAIN}"
       tls:
       - hosts:
-        - "grafana.${INTERNAL_DOMAIN}"
+        - "grafana.${SECRET_DOMAIN}"
     persistence:
       enabled: true
       existingClaim: grafana-pvc
