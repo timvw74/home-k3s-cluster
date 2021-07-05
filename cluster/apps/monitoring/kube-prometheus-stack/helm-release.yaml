@@ -73,10 +73,10 @@ spec:
         annotations:
           traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
         hosts:
-        - "alertmanager.${SECRET_DOMAIN}"
+        - "alertmanager.${INTERNAL_DOMAIN}"
         tls:
         - hosts:
-          - "alertmanager.${SECRET_DOMAIN}"
+          - "alertmanager.${INTERNAL_DOMAIN}"
       alertmanagerSpec:
         storage:
           volumeClaimTemplate:
@@ -122,10 +122,10 @@ spec:
         annotations:
           traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
         hosts:
-        - "prometheus.${SECRET_DOMAIN}"
+        - "prometheus.${INTERNAL_DOMAIN}"
         tls:
         - hosts:
-          - "prometheus.${SECRET_DOMAIN}"
+          - "prometheus.${INTERNAL_DOMAIN}"
       prometheusSpec:
         ruleSelector: {}
         ruleNamespaceSelector: {}

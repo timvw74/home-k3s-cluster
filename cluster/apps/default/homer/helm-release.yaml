@@ -24,7 +24,7 @@ spec:
       enabled: true
       ingressClassName: "traefik"
       hosts:
-      - host: "homer.${SECRET_DOMAIN}"
+      - host: "homer.${INTERNAL_DOMAIN}"
         paths:
         - path: /
           pathType: Prefix
@@ -34,7 +34,7 @@ spec:
           pathType: Prefix
       tls:
       - hosts:
-        - "homer.${SECRET_DOMAIN}"
+        - "homer.${INTERNAL_DOMAIN}"
         - "www.timvw.co.uk"
     persistence:
       config:
