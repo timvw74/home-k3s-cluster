@@ -46,18 +46,17 @@ spec:
     - name: m2p-cv
       accessModes:
       - ReadWriteOnce
-      storageClassName: longhorn
       configMap:
         name: mqtt2prometheus-config
     
-    # additionalContainers:
-    # - name: mqtt2prometheus
-    #   image: hikhvar/mqtt2prometheus:v0.1.5
-    #   imagePullPolicy: IfNotPresent
-    #   ports:
-    #   - containerPort: 9641
-    #     name: prom
-    #   volumeMounts:
-    #   - name: m2p-cv
-    #     mountPath: /config.yaml
-    #     subPath: config-yaml
+    additionalContainers:
+    - name: mqtt2prometheus
+      image: hikhvar/mqtt2prometheus:v0.1.5
+      imagePullPolicy: IfNotPresent
+      ports:
+      - containerPort: 9641
+        name: prom
+      volumeMounts:
+      - name: m2p-cv
+        mountPath: /config.yaml
+        subPath: config-yaml
