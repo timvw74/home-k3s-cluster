@@ -53,7 +53,7 @@ spec:
       - name: m2p-cv
         mountPath: /config.yaml
         subPath: config-yaml
-  volumes:
-  - name: m2p-cv
-    configMap:
-      name: mqtt2prometheus-config
+    volumes:
+    - name: m2p-cv
+      configMap:
+        name: mqtt2prometheus-config
