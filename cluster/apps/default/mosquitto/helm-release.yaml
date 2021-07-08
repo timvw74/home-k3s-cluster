@@ -44,6 +44,9 @@ spec:
       periodSeconds: 60
     additionalVolumes:
     - name: m2p-cv
+      accessModes:
+      - ReadWriteOnce
+      storageClassName: longhorn
       configMap:
         name: mqtt2prometheus-config
     additionalContainers:
