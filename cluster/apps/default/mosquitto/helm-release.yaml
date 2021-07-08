@@ -15,13 +15,6 @@ spec:
         kind: HelmRepository
         name: k8s-at-home-charts
         namespace: flux-system
-  volumes:
-  - name: m2p-cv
-    accessModes:
-    - ReadWriteOnce
-    storageClassName: longhorn
-    configMap:
-      name: mqtt2prometheus-config
   values:
     image:
       repository: eclipse-mosquitto
@@ -49,6 +42,14 @@ spec:
         port: 1883
       initialDelaySeconds: 60
       periodSeconds: 60
+    volumes:
+    - name: m2p-cv
+      accessModes:
+      - ReadWriteOnce
+      storageClassName: longhorn
+      configMap:
+        name: mqtt2prometheus-config
+    
     # additionalContainers:
     # - name: mqtt2prometheus
     #   image: hikhvar/mqtt2prometheus:v0.1.5
