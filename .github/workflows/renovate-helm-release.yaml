@@ -33,5 +33,5 @@ jobs:
         assignees: "timvw74"
         commit-message: "Update renovatebot helm-release annotations"
         body: |
-          Add special annotations to HelmReleases inorder for Renovate to pick up new versions of Helm charts
+          Add special annotations to HelmReleases in order for Renovate to pick up new versions of Helm charts
         labels: renovate/helm-release-annotations
