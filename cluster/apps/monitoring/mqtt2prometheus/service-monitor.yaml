@@ -5,12 +5,12 @@ metadata:
   name: mqtt-exporter
   namespace: default
   labels:
-    app.kubernetes.io/name: mosquitto
+    app.kubernetes.io/name: mqtt-exporter
 spec:
   endpoints:
   - path: /metrics
-    targetPort: metrics
-  jobLabel: mosquitto
+    targetPort: monitoring
+  jobLabel: mqtt-exporter
   namespaceSelector:
     matchNames:
     - default
