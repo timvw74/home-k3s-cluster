@@ -4,4 +4,4 @@ resources:
 # - botkube
 - grafana
 - kube-prometheus-stack
-# - loki
+- loki
