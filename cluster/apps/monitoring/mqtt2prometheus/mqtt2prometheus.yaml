@@ -1,0 +1,36 @@
+ind: Deployment
+apiVersion: apps/v1
+metadata:
+  namespace: monitoring
+  name: mqtt-exporter
+  labels:
+    app.kubernetes.io/name: mqtt-exporter
+    app.kubernetes.io/instance: mqtt-exporter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: mqtt-exporter
+      app.kubernetes.io/instance: mqtt-exporter
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: mqtt-exporter
+        app.kubernetes.io/instance: mqtt-exporter
+    spec:
+      containers:
+      - name: mqtt-exporter
+        image: hikhvar/mqtt2prometheus:v0.1.5
+        imagePullPolicy: IfNotPresent
+        ports:
+        - name: monitoring
+          containerPort: 9641
+        volumeMounts:
+        - name: m2p-cv
+          mountPath: /config.yaml
+          subPath: config-yaml
+          readOnly: true
+      volumes:
+      - name: m2p-cv
+        configMap:
+          name: mqtt2prometheus-config

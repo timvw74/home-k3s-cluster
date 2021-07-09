@@ -1,8 +1,5 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-# - botkube
-- grafana
-- kube-prometheus-stack
-- loki
-- mqtt2prometheus
+- mqtt2prometheus.yaml
+- mqtt2prometheus-config.yaml
