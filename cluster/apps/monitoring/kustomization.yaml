@@ -5,4 +5,4 @@ resources:
 - grafana
 - kube-prometheus-stack
 - loki
-- mqtt2prometheus
+# - mqtt2prometheus
