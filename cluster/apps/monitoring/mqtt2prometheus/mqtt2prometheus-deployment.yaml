@@ -8,10 +8,11 @@ metadata:
     app.kubernetes.io/name: mqtt-exporter
     app.kubernetes.io/instance: mqtt-exporter
 spec:
-  clusterIP: None
   selector:
     app.kubernetes.io/name: mqtt-exporter
     app.kubernetes.io/instance: mqtt-exporter
+    prometheus.io/port: 9641
+    prometheus.io/scrape: true
   ports:
   - name: monitoring
     port: 9641
