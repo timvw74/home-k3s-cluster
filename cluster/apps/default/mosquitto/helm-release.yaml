@@ -53,4 +53,3 @@ spec:
     #   - name: m2p-cv
     #     mountPath: /config.yaml
     #     subPath: config-yaml
-
