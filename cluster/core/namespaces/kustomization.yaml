@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
 - cert-manager.yaml
 - development.yaml
+- kube-system.yaml
 - longhorn-system.yaml
 - monitoring.yaml
 - networking.yaml
