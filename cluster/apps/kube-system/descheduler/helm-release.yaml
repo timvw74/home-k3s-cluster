@@ -31,4 +31,6 @@ spec:
         RemovePodsViolatingInterPodAntiAffinity:
           enabled: false
         LowNodeUtilization:
-          enabled: false
+          enabled: true
+        RemovePodsViolatingNodeTaints:
+          enabled: true
