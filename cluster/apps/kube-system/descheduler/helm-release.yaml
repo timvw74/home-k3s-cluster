@@ -35,11 +35,11 @@ spec:
           params:
             nodeResourceUtilizationThresholds:
               thresholds:
-                "cpu" : 20
+                "cpu": 20
                 "memory": 20
                 "pods": 20
               targetThresholds:
-                "cpu" : 40
+                "cpu": 40
                 "memory": 40
                 "pods": 40
         RemovePodsViolatingNodeTaints:
