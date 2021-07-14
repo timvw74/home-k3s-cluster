@@ -34,7 +34,8 @@ spec:
           pathType: Prefix
       tls:
       - hosts:
-        - "${SECRET_EXTERNAL_DOMAIN}"
+        - "www.${SECRET_EXTERNAL_DOMAIN}"
+        - "homer.${SECRET_DOMAIN}"
     persistence:
       config:
         enabled: true
