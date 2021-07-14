@@ -52,8 +52,6 @@ spec:
     - --entrypoints.websecure.http.tls.certresolver=cloudflare
     - --entrypoints.websecure.http.tls.domains[0].main=${SECRET_DOMAIN}
     - --entrypoints.websecure.http.tls.domains[0].sans=*.${SECRET_DOMAIN}
-    - --entrypoints.websecure.http.tls.domains[1].main=${SECRET_EXTERNAL_DOMAIN}
-    - --entrypoints.websecure.http.tls.domains[1].sans=*.${SECRET_EXTERNAL_DOMAIN}
     - --certificatesresolvers.cloudflare.acme.dnschallenge.provider=cloudflare
     - --certificatesresolvers.cloudflare.acme.email=${CLOUDFLARE_EMAIL}
     - --certificatesresolvers.cloudflare.acme.dnschallenge.resolvers=1.1.1.1
