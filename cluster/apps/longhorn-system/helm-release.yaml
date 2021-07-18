@@ -46,7 +46,7 @@ spec:
         {
           "name":"backup",
           "task":"backup",
-          "cron":"30 3 */2 * *",
+          "cron":"30 3 0 * *",
           "retain":2
         }
       ]'
