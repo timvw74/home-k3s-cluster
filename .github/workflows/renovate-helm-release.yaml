@@ -4,7 +4,7 @@ name: renovate-helmrelease
 on:
   workflow_dispatch:
   schedule:
-  - cron: '0 0 * * *'
+  - cron: '0 * * * *'
 
 jobs:
   renovate-helmrelease:
@@ -16,7 +16,7 @@ jobs:
         fetch-depth: 1
 
     - name: Renovate Helm Releases
-      uses: k8s-at-home/renovate-helm-releases@v1.4.2
+      uses: k8s-at-home/renovate-helm-releases@v1.4.3
       with:
         cluster-path: "./cluster"
 
