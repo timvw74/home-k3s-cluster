@@ -39,15 +39,14 @@ spec:
       # DB_PASSWORD:
       # # -- Mysql/Postgres database name
       # DB_NAME:
-    ingress:
-      main:
-        enabled: false
-      # ingressClassName: "traefik"
-      # hosts:
-      # - host: "kanboard.${SECRET_DOMAIN}"
-      #   paths:
-      #   - path: /
-      #     pathType: Prefix
+    # ingress:
+    #   enabled: false
+    #   ingressClassName: "traefik"
+    #   hosts:
+    #   - host: "kanboard.${SECRET_DOMAIN}"
+    #     paths:
+    #     - path: /
+    #       pathType: Prefix
       # tls:
       # - hosts:
       #   - "${SECRET_EXTERNAL_DOMAIN}"
