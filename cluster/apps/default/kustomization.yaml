@@ -3,6 +3,6 @@ kind: Kustomization
 resources:
 - homer
 # - kafka
-- kanboard
+# - kanboard
 - mosquitto
 # - bitwarden
