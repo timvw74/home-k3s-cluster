@@ -20,33 +20,14 @@ spec:
       repository: kanboard/kanboard
       tag: 1.2.20
       pullPolicy: IfNotPresent
-    env:
-      # -- Set the container timezone
-      TZ: UTC
-      # -- Enable/disable email configuration from the user interface
-      MAIL_CONFIGURATION: "false"
-      # -- log driver: syslog, stderr, stdout or file
-      LOG_DRIVER: stdout
-      # -- Database driver: sqlite, mysql or postgres
-      DB_DRIVER: sqlite
-      # # -- Mysql/Postgres hostname
-      # DB_HOSTNAME:
-      # # -- Mysql/Postgres custom port (empty = default port)
-      # DB_PORT:
-      # # -- Mysql/Postgres username
-      # DB_USERNAME:
-      # # -- Mysql/Postgres password
-      # DB_PASSWORD:
-      # # -- Mysql/Postgres database name
-      # DB_NAME:
-    # ingress:
-    #   enabled: false
-    #   ingressClassName: "traefik"
-    #   hosts:
-    #   - host: "kanboard.${SECRET_DOMAIN}"
-    #     paths:
-    #     - path: /
-    #       pathType: Prefix
+    ingress:
+      enabled: true
+      ingressClassName: "traefik"
+      hosts:
+      - host: "kanboard.${SECRET_DOMAIN}"
+        paths:
+        - path: /
+          pathType: Prefix
       # tls:
       # - hosts:
       #   - "${SECRET_EXTERNAL_DOMAIN}"
