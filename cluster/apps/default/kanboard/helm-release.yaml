@@ -40,7 +40,7 @@ spec:
       # # -- Mysql/Postgres database name
       # DB_NAME:
     ingress:
-      enabled: true
+      enabled: false
       ingressClassName: "traefik"
       hosts:
       - host: "kanboard.${SECRET_DOMAIN}"
