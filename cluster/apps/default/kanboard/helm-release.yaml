@@ -28,9 +28,9 @@ spec:
         paths:
         - path: /
           pathType: Prefix
-      # tls:
-      # - hosts:
-      #   - "${SECRET_EXTERNAL_DOMAIN}"
+      tls:
+      - hosts:
+        - "${SECRET_EXTERNAL_DOMAIN}"
     persistence:
       data:
         enabled: false
