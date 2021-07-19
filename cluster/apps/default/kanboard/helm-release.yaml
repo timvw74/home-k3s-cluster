@@ -21,6 +21,7 @@ spec:
       tag: 1.2.20
       pullPolicy: IfNotPresent
     ingress:
+      enabled: true
       ingressClassName: "traefik"
       hosts:
       - host: "kanboard.${SECRET_DOMAIN}"
