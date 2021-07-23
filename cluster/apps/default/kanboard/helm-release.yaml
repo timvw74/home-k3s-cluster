@@ -33,6 +33,6 @@ spec:
         - "${SECRET_EXTERNAL_DOMAIN}"
     persistence:
       data:
-        enabled: false
+        enabled: true
         existingClaim: kanboard-data
         mountPath: /var/www/app/data
