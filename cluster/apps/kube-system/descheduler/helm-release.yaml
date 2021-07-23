@@ -38,9 +38,9 @@ spec:
                 "cpu": 30
                 "memory": 30
                 "pods": 30
-              targetThresholds:
-                "cpu": 50
-                "memory": 50
-                "pods": 50
+              # targetThresholds:
+              #   "cpu": 50
+              #   "memory": 50
+              #   "pods": 50
         RemovePodsViolatingNodeTaints:
           enabled: true
