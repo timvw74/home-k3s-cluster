@@ -27,7 +27,7 @@ spec:
         annotations:
           traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
         hosts:
-        - "kanboard.${SECRET_DOMAIN}"
+        - host: "kanboard.${SECRET_DOMAIN}"
         tls:
         - hosts:
           - "kanboard.${SECRET_DOMAIN}"
