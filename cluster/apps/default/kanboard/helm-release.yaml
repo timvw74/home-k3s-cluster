@@ -20,6 +20,17 @@ spec:
       repository: kanboard/kanboard
       tag: v1.2.20
       pullPolicy: IfNotPresent
+    ingress:
+      enabled: true
+      ingressClassName: "traefik"
+      hosts:
+      - host: "kanboard.${SECRET_DOMAIN}"
+        paths:
+        - path: /
+          pathType: Prefix
+      tls:
+      - hosts:
+        - "${SECRET_EXTERNAL_DOMAIN}"
     persistence:
       data:
         enabled: true
