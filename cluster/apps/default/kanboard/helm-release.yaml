@@ -21,7 +21,6 @@ spec:
       tag: v1.2.20
       pullPolicy: IfNotPresent
     ingress:
-      enabled: true
       ingressClassName: "traefik"
       annotations:
         traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
