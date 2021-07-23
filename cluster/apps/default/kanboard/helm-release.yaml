@@ -21,14 +21,16 @@ spec:
       tag: v1.2.20
       pullPolicy: IfNotPresent
     ingress:
-      ingressClassName: "traefik"
-      annotations:
-        traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
-      hosts:
-      - "kanboard.${SECRET_DOMAIN}"
-      tls:
-      - hosts:
+      main:
+        enabled: true
+        ingressClassName: "traefik"
+        annotations:
+          traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+        hosts:
         - "kanboard.${SECRET_DOMAIN}"
+        tls:
+        - hosts:
+          - "kanboard.${SECRET_DOMAIN}"
     persistence:
       data:
         enabled: true
