@@ -3,6 +3,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: kanboard-data
+  namespace: default
 spec:
   accessModes:
   - ReadWriteOnce
