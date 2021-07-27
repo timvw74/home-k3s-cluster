@@ -4,5 +4,5 @@ resources:
 # - botkube
 # - grafana
 - kube-prometheus-stack
-# - loki
+- loki
 - mqtt2prometheus
