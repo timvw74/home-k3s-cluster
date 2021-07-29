@@ -17,15 +17,15 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
-    ingress:
-      enabled: true
-      ingressClassName: "traefik"
-      annotations:
-        traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
-        traefik.ingress.kubernetes.io/router.tls: "true"
-        traefik.ingress.kubernetes.io/router.middlewares: longhorn-system-svc-longhorn-headers@kubernetescrd
-      host: "longhorn.${SECRET_DOMAIN}"
-      tlsSecret: "${SECRET_DOMAIN/./-}"
+    # ingress:
+    #   enabled: true
+    #   ingressClassName: "traefik"
+    #   annotations:
+    #     traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+    #     traefik.ingress.kubernetes.io/router.tls: "true"
+    #     traefik.ingress.kubernetes.io/router.middlewares: longhorn-system-svc-longhorn-headers@kubernetescrd
+    #   host: "longhorn.${SECRET_DOMAIN}"
+    #   tlsSecret: "${SECRET_DOMAIN/./-}"
     defaultSettings:
       backupTarget: "${SECRET_S3_BACKUP_BUCKET}"
       backupTargetCredentialSecret: longhorn-aws-secret
