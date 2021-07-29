@@ -17,15 +17,15 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
-    ingress:
-      enabled: true
-      ingressClassName: "traefik"
-      annotations:
-        traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
-        traefik.ingress.kubernetes.io/router.tls: "true"
-        traefik.ingress.kubernetes.io/router.middlewares: longhorn-system-svc-longhorn-headers@kubernetescrd
-      host: "longhorn.${SECRET_DOMAIN}"
-      tlsSecret: "${SECRET_DOMAIN/./-}"
+    # ingress:
+    #   enabled: true
+    #   ingressClassName: "traefik"
+    #   annotations:
+    #     traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+    #     traefik.ingress.kubernetes.io/router.tls: "true"
+    #     traefik.ingress.kubernetes.io/router.middlewares: longhorn-system-svc-longhorn-headers@kubernetescrd
+    #   host: "longhorn.${SECRET_DOMAIN}"
+    #   tlsSecret: "${SECRET_DOMAIN/./-}"
     defaultSettings:
       backupTarget: "${SECRET_S3_BACKUP_BUCKET}"
       backupTargetCredentialSecret: longhorn-aws-secret
@@ -42,8 +42,8 @@ spec:
         {
           "name":"snap",
           "task":"snapshot",
-          "cron":"0 3 * * *",
-          "retain":2
+          "cron":"30 2 */2 * *",
+          "retain":7
         },
         {
           "name":"backup",
