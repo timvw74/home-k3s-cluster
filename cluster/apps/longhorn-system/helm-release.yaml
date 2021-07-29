@@ -29,7 +29,7 @@ spec:
     defaultSettings:
       backupTarget: "${SECRET_S3_BACKUP_BUCKET}"
       backupTargetCredentialSecret: longhorn-aws-secret
-      defaultDataPath: /mnt/longhorn
+      defaultDataPath: /mnt/hdd
       upgradeChecker: true
       defaultReplicaCount: 1
     persistence:
