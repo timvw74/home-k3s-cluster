@@ -24,8 +24,7 @@ spec:
           retention_period: 168h
       persistence:
         enabled: true
-        storageClassName: longhorn
-        size: 50Gi
+        existingClaim: loki-pvc
       serviceMonitor:
         enabled: true
     promtail:
