@@ -24,7 +24,7 @@ spec:
           retention_period: 168h
       persistence:
         enabled: true
-        existingClaim: loki-pvc
+        existingClaim: storage-loki-0
       serviceMonitor:
         enabled: true
     promtail:
