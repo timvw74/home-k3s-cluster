@@ -106,6 +106,9 @@ spec:
         - "grafana.${SECRET_DOMAIN}"
     persistence:
       enabled: true
-      existingClaim: grafana-pvc
+      storageClassName: "longhorn"
+      size: 10Gi
+      accessModes:
+      - ReadWriteOnce
     podAnnotations:
       configmap.reloader.stakater.com/reload: "grafana"
