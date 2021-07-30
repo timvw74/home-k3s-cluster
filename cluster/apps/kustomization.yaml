@@ -5,5 +5,5 @@ resources:
 # - kube-system
 - longhorn-system
 # - monitoring
-# - networking
-# - system-upgrade
+- networking
+- system-upgrade
