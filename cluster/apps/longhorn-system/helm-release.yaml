@@ -31,10 +31,10 @@ spec:
       backupTargetCredentialSecret: longhorn-aws-secret
       defaultDataPath: /mnt/hdd
       upgradeChecker: true
-      defaultReplicaCount: 2
+      defaultReplicaCount: 1
     persistence:
       defaultClass: true
-      defaultClassReplicaCount: 2
+      defaultClassReplicaCount: 1
       reclaimPolicy: Delete
       recurringJobs:
         enable: true
