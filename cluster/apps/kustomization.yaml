@@ -4,6 +4,6 @@ resources:
 - default
 - kube-system
 - longhorn-system
-# - monitoring
+- monitoring
 - networking
 - system-upgrade
