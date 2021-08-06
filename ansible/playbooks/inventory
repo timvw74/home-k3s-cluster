@@ -1,9 +1,9 @@
 localhost ansible_connection=local
 
 [masters]
-192.168.0.20   ansible_user=ubuntu type=server hostname=kube-master1
+192.168.0.20   ansible_user=ubuntu type=server hostname=kube-master0
 
 [agents]
-192.168.0.30   ansible_user=ubuntu type=sbc hostname=kube-agent1
-192.168.0.31   ansible_user=ubuntu type=sbc hostname=kube-agent2
-192.168.0.32   ansible_user=ubuntu type=sbc hostname=kube-agent3
+192.168.0.30   ansible_user=ubuntu type=sbc hostname=kube-agent0
+192.168.0.31   ansible_user=ubuntu type=sbc hostname=kube-agent1
+192.168.0.32   ansible_user=ubuntu type=sbc hostname=kube-agent2
