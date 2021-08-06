@@ -1,16 +1,16 @@
 ---
-- name: uninstall k3s master
+- name: uninstall k3s masters
   become: true
   command: sh /usr/local/bin/k3s-uninstall.sh
-  when: hostvars[inventory_hostname].group_names[0] == "master"
+  when: hostvars[inventory_hostname].group_names[0] == "masters"
   ignore_errors: yes
   async: 45
   poll: 0
 
-- name: uninstall k3s workers
+- name: uninstall k3s agents
   become: true
   command: sh /usr/local/bin/k3s-agent-uninstall.sh
-  when: hostvars[inventory_hostname].group_names[0] == "workers"
+  when: hostvars[inventory_hostname].group_names[0] == "agents"
   ignore_errors: yes
   async: 45
   poll: 0
