@@ -14,3 +14,11 @@
   ignore_errors: yes
   async: 45
   poll: 0
+
+- name: wipe storage
+  become: true
+  command: rm -rf /mnt/hdd/*
+  ignore_errors: yes
+  async: 45
+  poll: 0
+
