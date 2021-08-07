@@ -3,4 +3,3 @@ kind: Kustomization
 resources:
 - mqtt2prometheus-deployment.yaml
 - mqtt2prometheus-config.yaml
-- service-monitor.yaml
