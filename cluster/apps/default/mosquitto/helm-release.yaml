@@ -31,8 +31,8 @@ spec:
     auth:
       # -- By enabling this, `allow_anonymous` gets set to `false` in the mosquitto config.
       enabled: false
-    livenessProbe:
-      tcpSocket:
-        port: 1883
-      initialDelaySeconds: 60
-      periodSeconds: 60
+    # livenessProbe:
+    #   tcpSocket:
+    #     port: 1883
+    #   initialDelaySeconds: 60
+    #   periodSeconds: 60
