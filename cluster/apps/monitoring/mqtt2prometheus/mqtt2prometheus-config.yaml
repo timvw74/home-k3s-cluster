@@ -7,7 +7,7 @@ metadata:
 data:
   config-yaml: |
     mqtt:
-      server: tcp://192.168.0.21:1883
+      server: tcp://192.168.0.30:1883
       topic_path: zigbee2mqtt/+
       qos: 0
     cache:
