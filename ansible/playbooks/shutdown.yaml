@@ -1,7 +1,7 @@
 ---
 - hosts:
-  - master
-  - workers
+  - masters
+  - agents
   become: true
   gather_facts: true
   vars_prompt:
@@ -16,14 +16,14 @@
       msg: "Abort."
     when: reboot_confirmation != "Y"
   
-  - name: cluster-shutdown | k3sup master node
-    become: true
-    command: /sbin/shutdown -h 120
-    with_items:
-    - "{{ groups['master'] }}"
-
   - name: cluster-shutdown | k3sup worker nodes
     become: true
     command: /sbin/shutdown -h 60
     with_items:
-    - "{{ groups['workers'] }}"
+    - "{{ groups['agents'] }}"
+
+  - name: cluster-shutdown | k3sup master node
+    become: true
+    command: /sbin/shutdown -h 120
+    with_items:
+    - "{{ groups['masters'] }}"
