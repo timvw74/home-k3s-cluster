@@ -21,7 +21,7 @@ spec:
     prometheusOperator:
       createCustomResource: false
     alertmanager:
-      enabled: false
+      enabled: true
       config:
         global:
           slack_api_url: "${SECRET_ALERT_MANAGER_DISCORD_WEBHOOK}"
